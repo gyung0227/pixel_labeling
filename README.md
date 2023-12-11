@@ -6,3 +6,6 @@
 ```
   conda activate labeling
 ```
+```
+  python main.py
+```
