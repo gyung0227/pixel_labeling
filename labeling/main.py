@@ -87,7 +87,7 @@ while True:
         image_name = os.path.basename(img_files[current_image_index])
         
         # 빨간색 부분만 추출하여 저장
-        red_mask = cv2.inRange(image, (pixel_range_l, pixel_range_h))  # 빨간색 범위 설정
+        red_mask = cv2.inRange(image, pixel_range_l, pixel_range_h)  # 빨간색 범위 설정
         red_region = cv2.bitwise_and(image, image, mask=red_mask)
         output_image_path = os.path.join(result_dir, image_name)
         cv2.imwrite(output_image_path, red_region)
